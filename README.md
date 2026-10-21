@@ -1,39 +1,38 @@
-# Lab 1 – Installing Jenkins
+# Jenkins Labs – my work
 
-📖 **Lab guide:** https://nouhakhyari-sys.github.io/jenkins-lab/
+📖 **Lab guides:** https://nouhakhyari-sys.github.io/jenkins-lab/
 
-This repository is **your personal lab repository**. Your teacher can see it. You will use it for every Jenkins lab of the module.
+This is **your personal repository** for the whole module. Your teacher can see it.
+There is **one folder per lab**: put each lab's work in its own folder.
 
-## Your tasks
+| Folder | Lab | What to add |
+|---|---|---|
+| [`lab2/`](lab2/) | Lab 2 – Your First Pipeline | `Jenkinsfile`, `stages.png`, `console.png` |
+| [`lab3/`](lab3/) | Lab 3 | see the lab guide |
+| [`lab4/`](lab4/) | Lab 4 | see the lab guide |
 
-1. Follow the lab guide and install Jenkins **with Docker** (page 2.4 of the guide).
-2. Complete the setup wizard and create **your own administrator account** (page 3).
-3. Fill in [`REPORT.md`](REPORT.md): the commands you ran, your Jenkins version, and the answers to the questions.
-4. Add your screenshots to the [`screenshots/`](screenshots/) folder:
-   - `docker-ps.png`: the output of `docker ps` showing your `jenkins-local` container running
-   - `dashboard.png`: your Jenkins dashboard, with the version visible in the footer
-5. Commit and push your work before the deadline.
+Lab 1 (installing Jenkins) has nothing to hand in.
 
-## How to submit
+## How to add your files (in the browser)
 
-**Option 1: with Git (recommended, you will need it for the next labs)**
+1. Click the folder of the lab, for example **lab2**.
+2. **A script** (`Jenkinsfile`): **Add file › Create new file**, type the name, paste the script, then **Commit changes**.
+3. **Screenshots**: **Add file › Upload files**, drag the images, then **Commit changes**.
+
+Use exactly the file names given in the lab guide.
+
+## With Git (optional)
 
 ```bash
 git clone <the URL of THIS repository>
 cd <repository folder>
-# edit REPORT.md, copy your screenshots into screenshots/
+# copy your files into lab2/
 git add .
-git commit -m "Lab 1: Jenkins installed"
+git commit -m "Lab 2 done"
 git push
 ```
 
-**Option 2: in the browser**
-Open `REPORT.md` → pencil icon → edit → **Commit changes**.
-For screenshots: open the `screenshots` folder → **Add file** → **Upload files**.
+## Before each deadline
 
-## Checklist before the deadline
-
-- [ ] `REPORT.md` is complete (name, commands, version, answers)
-- [ ] `screenshots/docker-ps.png` is uploaded
-- [ ] `screenshots/dashboard.png` is uploaded, with the Jenkins version visible
-- [ ] Everything is pushed (refresh this page on GitHub to check)
+- [ ] All files are in the right folder, with the right names
+- [ ] Refresh this page on GitHub: you see your files
