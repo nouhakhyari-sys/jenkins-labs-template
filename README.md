@@ -2,8 +2,15 @@
 
 📖 **Lab guides:** https://nouhakhyari-sys.github.io/jenkins-lab/
 
-This is **your personal repository** for the whole module. Your teacher can see it.
-There is **one folder per lab**: put each lab's work in its own folder.
+This is **your personal repository** for the whole module. There is **one folder per lab**: put each lab's work in its own folder.
+
+## Set up your repository (once, at the start of the module)
+
+1. Click **Use this template › Create a new repository** (top right of this page), or open this link:
+   https://github.com/new?template_name=jenkins-labs-template&template_owner=nouhakhyari-sys
+2. **Owner:** your account. **Repository name:** `jenkins-labs`. Choose **Private**. Click **Create repository**.
+3. In your new repository: **Settings › Collaborators › Add people** → type `nouhakhyari-sys` → **Add**. Your teacher can now see your work.
+4. Copy the address of your repository (for example `https://github.com/your-name/jenkins-labs`) and paste it into the LMS assignment **📥 My Jenkins Labs repository**.
 
 | Folder | Lab | What to add |
 |---|---|---|
