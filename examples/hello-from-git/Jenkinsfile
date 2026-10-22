@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage('Hello from Git') {
+            steps {
+                echo 'Hello World! This script was read from GitHub.'
+            }
+        }
+    }
+}
