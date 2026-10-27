@@ -29,6 +29,7 @@ pipeline {
             post {
                 always {
                     junit 'lab2/java-app/build/test-results/*.xml'   // JUnit plugin
+                    archiveArtifacts artifacts: 'lab2/java-app/build/test-results/*.xml'
                 }
             }
         }
