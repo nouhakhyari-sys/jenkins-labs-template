@@ -1,0 +1,51 @@
+// Pipeline for the Java calculator (Jenkins installed directly on Windows).
+pipeline {
+    agent any
+
+    options {
+        timestamps()                     // Timestamper plugin: time at the start of each log line
+    }
+
+    parameters {
+        booleanParam(name: 'SIMULATE_BUG', defaultValue: false,
+                     description: 'Tick to put a bug in the calculator')
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                dir('lab2/java-app') {
+                    bat 'javac -version'
+                    bat 'javac -d build/classes src/Calculator.java test/CalculatorTest.java'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                dir('lab2/java-app') {
+                    bat "java -DsimulateBug=${params.SIMULATE_BUG} -cp build/classes CalculatorTest"
+                }
+            }
+            post {
+                always {
+                    junit 'lab2/java-app/build/test-results/*.xml'   // JUnit plugin: Test Result page
+                }
+            }
+        }
+        stage('Package') {
+            steps {
+                dir('lab2/java-app') {
+                    bat 'jar cfe build/calculator.jar Calculator -C build/classes .'
+                    bat 'java -jar build/calculator.jar'
+                }
+                archiveArtifacts artifacts: 'lab2/java-app/build/calculator.jar', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()                    // Workspace Cleanup plugin: delete the files after the build
+        }
+    }
+}

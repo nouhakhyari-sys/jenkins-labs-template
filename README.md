@@ -16,7 +16,7 @@ Full guide: https://nouhakhyari-sys.github.io/jenkins-lab/handin.html
 | Folder | Lab | What to add |
 |---|---|---|
 | [`lab2/`](lab2/) | Lab 2 – Your First Pipeline | `Jenkinsfile`, `stages.png`, `console.png` |
-| [`lab3/`](lab3/) | Lab 3 | see the lab guide |
+| [`lab3/`](lab3/) | Lab 3 – Build a Java Project | `Jenkinsfile`, `test-result.png`, `stages.png` |
 | [`lab4/`](lab4/) | Lab 4 | see the lab guide |
 
 Lab 1 (installing Jenkins) has nothing to hand in.
