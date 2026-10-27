@@ -1,9 +1,9 @@
-// Pipeline for the Java calculator (Jenkins installed directly on Windows).
+// Pipeline for the Java calculator (Jenkins on Windows)
 pipeline {
     agent any
 
     options {
-        timestamps()                     // Timestamper plugin: time at the start of each log line
+        timestamps()          // Timestamper plugin
     }
 
     parameters {
@@ -28,7 +28,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'lab2/java-app/build/test-results/*.xml'   // JUnit plugin: Test Result page
+                    junit 'lab2/java-app/build/test-results/*.xml'   // JUnit plugin
                 }
             }
         }
@@ -45,7 +45,7 @@ pipeline {
 
     post {
         always {
-            cleanWs()                    // Workspace Cleanup plugin: delete the files after the build
+            cleanWs()             // Workspace Cleanup plugin
         }
     }
 }
